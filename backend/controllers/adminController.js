@@ -31,6 +31,7 @@ const adminController = {
       const admins = await Admin.getAll();
       res.json(admins);
     } catch (error) {
+      console.error('ADMIN GETALL ERROR:', error);
       res.status(500).json({ error: 'Internal server error' });
     }
   },
